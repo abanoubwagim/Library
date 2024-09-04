@@ -2,15 +2,20 @@ import java.util.ArrayList;
 
 public class Library {
 
-    ArrayList <Book> books = new ArrayList<>();
-    ArrayList <Author> authors = new ArrayList<>();
+    ArrayList <Book> books;
+    ArrayList <Author> authors;
+    public Library(){
+         books = new ArrayList<>(); // Initialize arraylist
+         authors = new ArrayList<>();
 
-    public void addAuthor (Author author)
+    }
+
+    public void addAuthor (Author author) // To add author
     {
         authors.add(author);
     }
 
-    public void removeAuthor (int id )
+    public void removeAuthor (int id ) // To remove author
     {
         for (Author author : authors){
             if (author.id == id){
@@ -22,7 +27,7 @@ public class Library {
 
     }
 
-    public void printAuthor(int id){
+    public void printAuthor(int id){ // To print author
 
         for (Author author : authors){
             if (author.id == id){
@@ -33,14 +38,14 @@ public class Library {
                 return;
             }
         }
-        System.out.println("Author with id : ( "+ id + " ) is not found");
+        System.out.println("Author with id : ( "+ id + " ) is not found"); // If the author is not found
 
     }
 
 
 
 
-    public void printAuthorBooks(int id) {
+    public void printAuthorBooks(int id) { // print all book of the author
 
         boolean isAuthorExist = false;
         String authorName = "";
@@ -52,7 +57,7 @@ public class Library {
             }
         }
         if (!isAuthorExist){
-            System.out.printf("Author with id : ( "+ id + " ) is not found");
+            System.out.printf("Author with id : ( "+ id + " ) is not found");  // If the author is not found
             return;
         }
         System.out.println("Books of author : "+ authorName );
@@ -63,11 +68,11 @@ public class Library {
         }
         System.out.println("---------------------");
     }
-    public void addBook(Book book){
+    public void addBook(Book book){ // Add books in library
         books.add(book);
     }
 
-    public void removeBooks(int id){
+    public void removeBooks(int id){ // Remove books in library
 
             for (Book book : books){
             if (book.id == id){
@@ -81,9 +86,9 @@ public class Library {
 
     }
 
-    public void printBook(int id){
+    public void printBook(int id){ // Print book by its id 
 
-            for (Book book : books){
+        for (Book book : books){
           if (book.id == id){
                 System.out.println("Book : " + book.title);
                 System.out.println("Author : "+ book.author.name);
