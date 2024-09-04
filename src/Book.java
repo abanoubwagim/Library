@@ -4,9 +4,9 @@ public class Book {
     String title , publishingDate;
     Author author;
 
-    private static int idIncrementer = 1;
+    private static int idIncrementer = 1;  // You can change it by name of class in main class.
 
-    public Book(String title , String publishingDate , int version ,  Author author ){
+    public Book(String title , String publishingDate , int version ,  Author author ){ // Create Constructor
         this.id = idIncrementer;
         this.title = title;
         this.publishingDate = publishingDate ;
