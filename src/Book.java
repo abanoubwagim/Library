@@ -6,7 +6,7 @@ public class Book {
 
     private static int idIncrementer = 1;  // You can change it by name of class in main class.
 
-    public Book(String title , String publishingDate , int version ,  Author author ){ // Create Constructor
+    public Book(String title , String publishingDate , int version ,  Author author ){ // A Constructor
         this.id = idIncrementer;
         this.title = title;
         this.publishingDate = publishingDate ;
